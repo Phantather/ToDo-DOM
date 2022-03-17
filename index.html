@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+</head>
+<body>
+<section class="todo" id="vanta">
+    <div class="todo__content">
+        <h1 class="todo__title">Todo-List</h1>
+        <div class="todo__header">
+            <h4 class="todo__status">Status : <span class="todo__status">All</span></h4>
+            <h2 class="todo__time"></h2>
+        </div>
+        <form class="todo__form">
+            <input minlength="5" maxlength="20" required placeholder="Todo text" class="todo__input" type="text">
+            <button class="todo__btn add" type="submit">ADD</button>
+        </form>
+        <h2 class="todo__empty">Ваш список задач пуст ! ! ! </h2>
+        <ul class="todo__list">
+        </ul>
+        <div class="todo__footer">
+            <p class="todo__count">Todo Count : <span class="todo__count-num"></span></p>
+            <div class="todo__footer-btns">
+                <button style="background-color: blue" class="status__btn status__all">All</button>
+                <button style="background-color: gold" class="status__btn status__important">Important</button>
+                <button style="background-color: seagreen" class="status__btn status__done">Done</button>
+            </div>
+        </div>
+        <div class="todo__delete "><button class="delete__btn">All Delete</button></div>
+    </div>
+</section>
+
+
+<script src="src/js/three.min.js"></script>
+<script src="src/js/vanta.net.min.js"></script>
+<script>
+    VANTA.NET({
+        el: "#vanta",
+        mouseControls: true,
+        touchControls: true,
+        gyroControls: false,
+        minHeight: 200.00,
+        minWidth: 200.00,
+        scale: 1.00,
+        scaleMobile: 1.00,
+        color: 0xff8a8a,
+        backgroundColor: 0x2a2a2d,
+        points: 16.00,
+        maxDistance: 22.00,
+        spacing: 17.00
+    })
+</script>
+
+<script src="src/js/main.js"></script>
+</body>
+</html>
